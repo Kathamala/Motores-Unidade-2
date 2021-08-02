@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{769ec06e-f13d-3af7-1fa0-33263b81985f}</ProjectGuid>
+    <ProjectGuid>{266fe23c-8e92-fb29-6bc6-d6452e17ace0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -36,6 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\DoorScript.cs" />
      <Compile Include="Assets\Scripts\GameScript.cs" />
      <Compile Include="Assets\Scripts\MovingWall.cs" />
      <Compile Include="Assets\Scripts\PlayerScript.cs" />
@@ -568,40 +569,40 @@
         <HintPath>/home/thiago/Unity/Hub/Editor/2019.4.28f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Motores Unidade 2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Trabalho Unidade 2/Motores-Unidade-2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Cinemachine">
-        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Motores Unidade 2/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Trabalho Unidade 2/Motores-Unidade-2/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Motores Unidade 2/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Trabalho Unidade 2/Motores-Unidade-2/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Motores Unidade 2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Trabalho Unidade 2/Motores-Unidade-2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Motores Unidade 2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Trabalho Unidade 2/Motores-Unidade-2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Motores Unidade 2/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Trabalho Unidade 2/Motores-Unidade-2/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Motores Unidade 2/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Trabalho Unidade 2/Motores-Unidade-2/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Motores Unidade 2/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Trabalho Unidade 2/Motores-Unidade-2/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.cinemachine.editor">
-        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Motores Unidade 2/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Trabalho Unidade 2/Motores-Unidade-2/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Motores Unidade 2/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Trabalho Unidade 2/Motores-Unidade-2/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Motores Unidade 2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Trabalho Unidade 2/Motores-Unidade-2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Motores Unidade 2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+        <HintPath>/home/thiago/Documentos/Motores de Jogos I/Trabalho Unidade 2/Motores-Unidade-2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
