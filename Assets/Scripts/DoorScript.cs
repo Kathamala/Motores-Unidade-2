@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class DoorScript : MonoBehaviour
 {
+    public GameObject gameScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +23,22 @@ public class DoorScript : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Porta");
-            SceneManager.LoadScene("Stage2");
+            if(gameScript.GetComponent<GameScript>().getCurrentStage() == 1){
+                if(gameScript.GetComponent<GameScript>().getScore() >= gameScript.GetComponent<GameScript>().pointsToCompleteStage1){
+                    gameScript.GetComponent<GameScript>().setCurrentStage(2);
+                    SceneManager.LoadScene("Stage2");
+                } else {
+                    gameScript.GetComponent<GameScript>().toaster.GetComponent<ToastMessages>().showToast("Epa, ainda não né rapaz. Tá faltando moeda aí que eu tô ligado...", 5);
+                }
+            } else if(gameScript.GetComponent<GameScript>().getCurrentStage() == 2){
+                if(gameScript.GetComponent<GameScript>().getScore() >= gameScript.GetComponent<GameScript>().pointsToCompleteStage2){
+                    gameScript.GetComponent<GameScript>().setCurrentStage(2);                    
+                    SceneManager.LoadScene("SampleScene");
+                } else {
+                    gameScript.GetComponent<GameScript>().toaster.GetComponent<ToastMessages>().showToast("Epa, ainda não né rapaz. Tá faltando moeda aí que eu tô ligado...", 5);
+                }
+            }
+
         }
     }
 }

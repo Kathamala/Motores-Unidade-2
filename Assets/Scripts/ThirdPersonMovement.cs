@@ -17,7 +17,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public float gravity = -9.81f;
 
     public Transform groundCheck;
-    public float groundDistance = 1.3f;
+    public float groundDistance = 2f;
     public LayerMask groundMask;
 
     bool isGrounded;
@@ -55,6 +55,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+
 
         if(Input.GetButtonDown("Sprint")){
             speed = fastSpeed;

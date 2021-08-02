@@ -7,12 +7,12 @@ public class ToastMessages : MonoBehaviour
 {
     void Start()
     {
-        showToast("Hello", 2);
+        
     }
 
     public Text txt;
 
-    void showToast(string text,
+    public void showToast(string text,
         int duration)
     {
         StartCoroutine(showToastCOR(text, duration));
