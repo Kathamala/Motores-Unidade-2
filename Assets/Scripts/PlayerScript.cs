@@ -28,13 +28,14 @@ public class PlayerScript : MonoBehaviour
         {
             Destroy(other.gameObject);
             gameScript.GetComponent<GameScript>().addScore(10);
-            print("Points: " + gameScript.GetComponent<GameScript>().getScore());
             collisionWithFirstCoin = true;
         }
 
         if(other.gameObject.CompareTag("Killer"))
         {
-            transform.position = new Vector3(0, 40, 0);
+            GetComponent<CharacterController>().enabled = false;
+            GetComponent<CharacterController>().transform.position = initialPosition;
+            GetComponent<CharacterController>().enabled = true;            
             GetComponent<ThirdPersonMovement>().velocity = new Vector3(0, 0, 0);            
             gameScript.GetComponent<GameScript>().decreaseLives();
         }
