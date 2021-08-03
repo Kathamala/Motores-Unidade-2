@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class GameScript : MonoBehaviour
 {
-    static int lives = 3;
-    static float score = 0f;
-    static int currentStage;
+    static int lives = 4;
+    static int score = 0;
+    static int currentStage = 1;
 
     public Text scoreText;
     public Text livesText;
@@ -22,18 +22,24 @@ public class GameScript : MonoBehaviour
     private bool checkCoinText = false;
     private bool checkRunText = false;
     private bool checkCrazyPlatform = false;
+    private bool checkFloor = false;
     // Start is called before the first frame update
     void Start()
     {
-        toaster.GetComponent<ToastMessages>().showToast("Eae rapaz, beleza! Este é o ULTIMATE NINJA COIN COLLECTOR 3D 4K 1080P FULL HD TORRENT DUBLADO LEGENDADO. Primeiramente, vai usando o WSAD pra mexer o ninja. Também pode usar o mouse pra movimentar a câmera.", 10);
-        currentStage = 1;
+        if(score == 0){
+            currentStage = 1;
+            toaster.GetComponent<ToastMessages>().showToast("Eae rapaz, beleza! Este é o ULTIMATE NINJA COIN COLLECTOR 3D 4K 1080P FULL HD TORRENT DUBLADO LEGENDADO. Primeiramente, vai usando o WSAD pra mexer o ninja e Espaço para pular. Também pode usar o mouse pra movimentar a câmera.", 15);
+        } else{
+            currentStage = 2;
+            toaster.GetComponent<ToastMessages>().showToast("Hehehe, fase 2. O cara é bom.", 5);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         scoreText.text = "Score: " + score;
-        livesText.text = "Lives: " + lives;
+        livesText.text = "Lives: " + (lives+1);
 
         if(currentStage == 1){
             if(player.GetComponent<PlayerScript>().collisionWithFirstCoin && !checkCoinText){
@@ -50,11 +56,17 @@ public class GameScript : MonoBehaviour
                 checkCrazyPlatform = true;
                 toaster.GetComponent<ToastMessages>().showToast("O que era pra ser isso, na moral?", 7);
             }            
+        } else if(currentStage == 2){
+            if(player.transform.position.x > 93 && !checkFloor){
+                checkFloor = true;
+                toaster.GetComponent<ToastMessages>().showToast("Essas plataformas são difíceis. Se tiver com problema, tenta pular antes de começar a se movimentar. Ajuda a controlar melhor o ninja :)", 15);
+            }  
         }
 
         if(lives < 0){
+            lives = 4;
+            score = 0;
             SceneManager.LoadScene(0);
-            lives = 3;
         }
 
     }
@@ -75,15 +87,15 @@ public class GameScript : MonoBehaviour
         lives++;
     }
 
-    public float getScore(){
+    public int getScore(){
         return score;
     }
 
-    public void setScore(float value){
+    public void setScore(int value){
         score = value;
     }
 
-    public void addScore(float points){
+    public void addScore(int points){
         score += points;
     }
 
