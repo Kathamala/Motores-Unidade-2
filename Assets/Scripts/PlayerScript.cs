@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+//using UnityEngine.EventSystems;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
@@ -8,6 +9,8 @@ public class PlayerScript : MonoBehaviour
     private Vector3 initialPosition;
 
     [HideInInspector] public bool collisionWithFirstCoin = false;
+
+    //private bool paused;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +22,11 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        /*
+        if(EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }*/
     }
 
     void OnTriggerEnter(Collider other)

@@ -6,7 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class GameScript : MonoBehaviour
 {
-    static int lives = 4;
+    //public InvetoryUI stageInventoryUI;
+    //public static InvetoryUI inventoryUI;
+
+    public static List<Item> items;
+
+    static int lives = 2;
     static int score = 0;
     static int currentStage = 1;
 
@@ -29,6 +34,7 @@ public class GameScript : MonoBehaviour
         if(score == 0){
             currentStage = 1;
             toaster.GetComponent<ToastMessages>().showToast("Eae rapaz, beleza! Este é o ULTIMATE NINJA COIN COLLECTOR 3D 4K 1080P FULL HD TORRENT DUBLADO LEGENDADO. Primeiramente, vai usando o WSAD pra mexer o ninja e Espaço para pular. Também pode usar o mouse pra movimentar a câmera.", 15);
+            items = new List<Item>();
         } else{
             currentStage = 2;
             toaster.GetComponent<ToastMessages>().showToast("Hehehe, fase 2. O cara é bom.", 5);
@@ -66,10 +72,28 @@ public class GameScript : MonoBehaviour
         if(lives < 0){
             lives = 4;
             score = 0;
+            items = new List<Item>();
             SceneManager.LoadScene(0);
         }
 
     }
+
+    public List<Item> getItemsList(){
+        return items;
+    }
+
+    public void setItemsList(List<Item> itemsList){
+        items = itemsList;
+    }
+
+/*
+    public InvetoryUI getInventoryUI(){
+        return inventoryUI;
+    }
+
+    public void setInventoryUI(InvetoryUI iUI){
+        inventoryUI = iUI;
+    }*/
 
     public int getLives(){
         return lives;

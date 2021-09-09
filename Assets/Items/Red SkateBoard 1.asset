@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c071f7ecd76f153bafdebefec4c7d5, type: 3}
+  m_Name: Red SkateBoard 1
+  m_EditorClassIdentifier: 
+  name: RedSkateBoard
+  icon: {fileID: 2100000, guid: 60153e8e626a5bbdbaf6c02c456a5852, type: 2}
+  showInInventory: 1
+  isSkate: 1
